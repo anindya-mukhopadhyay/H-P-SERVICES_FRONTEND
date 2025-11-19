@@ -1,9 +1,8 @@
-import React from "react";
+/*import React from "react";
 import "./Footer.css";
 
 import logo from "../assets/logo.png";
 
-// Social Icons (your exact filenames)
 import facebookIcon from "../assets/footer1.png";
 import instagramIcon from "../assets/footer2.png";
 import twitterIcon from "../assets/footer3.png";
@@ -14,10 +13,10 @@ export default function Footer() {
   return (
     <footer className="footer-section">
 
-      {/* MAIN CONTENT */}
+      
       <div className="footer-content">
 
-        {/* LEFT */}
+        
         <div className="footer-left">
           <div className="footer-logo-row">
             <img src={logo} alt="H&P Logo" className="footer-logo" />
@@ -37,10 +36,10 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* DIVIDER */}
+        {/* DIVIDER 
         <div className="footer-divider"></div>
 
-        {/* RIGHT */}
+        {/* RIGHT 
         <div className="footer-right">
           <div>
             <h4>Email</h4>
@@ -59,7 +58,7 @@ export default function Footer() {
         </div>
       </div>
 
-      {/* BOTTOM ROW */}
+      {/* BOTTOM ROW 
       <div className="footer-bottom-row">
         <p>© 2024 H&P Projects. All rights reserved.</p>
 
@@ -72,4 +71,20 @@ export default function Footer() {
 
     </footer>
   );
-}
+}*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*anindya latest review code*/

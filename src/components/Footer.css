@@ -1,4 +1,4 @@
-.footer-section {
+/*.footer-section {
   width: 100%;
   background: #075056;
   padding: 40px 0 25px 0;
@@ -7,7 +7,7 @@
   align-items: center;
 }
 
-/* MAIN CONTENT AREA */
+/* MAIN CONTENT AREA 
 .footer-content {
   width: 1137.78px;
   height: 216.89px;
@@ -18,7 +18,7 @@
   position: relative;
 }
 
-/* LEFT AREA */
+/* LEFT AREA 
 .footer-left {
   width: 48%;
 }
@@ -46,7 +46,7 @@
   opacity: 0.9;
 }
 
-/* SOCIAL ICONS */
+/* SOCIAL ICONS 
 .footer-social {
   margin-top: 18px;
   display: flex;
@@ -64,14 +64,14 @@
   transform: scale(1.12);
 }
 
-/* DIVIDER */
+/* DIVIDER 
 .footer-divider {
   width: 1px;
   height: 100%;
   background: rgba(255, 255, 255, 0.25);
 }
 
-/* RIGHT SIDE */
+/* RIGHT SIDE 
 .footer-right {
   width: 48%;
   display: flex;
@@ -95,7 +95,7 @@
   text-decoration: underline;
 }
 
-/* BOTTOM ROW */
+/* BOTTOM ROW 
 .footer-bottom-row {
   width: 1137.78px;
   height: 18.67px;
@@ -122,4 +122,9 @@
 
 .footer-links a:hover {
   text-decoration: underline;
-}
+}*/
+
+
+
+
+/*anwesha latest updated code*/
