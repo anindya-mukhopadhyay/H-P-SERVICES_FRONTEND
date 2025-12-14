@@ -65,7 +65,7 @@ export default function Partner() {
               <h4>Partner – Administrative Head & Group Decision-Making</h4>
 
               <p>
-                Abhradeep Hazra leads the administrative functions, finance,
+                Koushik Paul leads the administrative functions, finance,
                 legal compliance, and corporate governance. With extensive
                 experience at DSS Group, he is pivotal in group-level strategic
                 decision-making, ensuring H & P Projects operates efficiently,
