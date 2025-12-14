@@ -252,20 +252,20 @@
   background: #075056;
   border-radius: 50%;
   position: absolute;
-  top: 20px;
-  left: -35px;
+  top: 170px;
+  left: 370px;
   opacity: 0.95;
   z-index: 1;
 }
 
 /* BIG BUBBLE (behind image, right side) */
 .img-bubble-big {
-  width: 350px;
-  height: 350px;
+  width: 270px;
+  height: 270px;
   background: #075056;
   border-radius: 50%;
   position: absolute;
-  right: -150px;
+  right: 220px;
   top: 48%;
   transform: translateY(-50%);
   opacity: 0.9;
