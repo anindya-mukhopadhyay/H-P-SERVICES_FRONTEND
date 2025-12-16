@@ -1,5 +1,5 @@
-/*import React from "react";
-import "./Footer.css";
+import React from "react";
+import "./styles/Footer.css";
 
 import logo from "../assets/logo.png";
 
@@ -12,11 +12,7 @@ import youtubeIcon from "../assets/footer5.png";
 export default function Footer() {
   return (
     <footer className="footer-section">
-
-      
       <div className="footer-content">
-
-        
         <div className="footer-left">
           <div className="footer-logo-row">
             <img src={logo} alt="H&P Logo" className="footer-logo" />
@@ -36,10 +32,10 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* DIVIDER 
+        {/* DIVIDER */}
         <div className="footer-divider"></div>
 
-        {/* RIGHT 
+        {/* RIGHT */}
         <div className="footer-right">
           <div>
             <h4>Email</h4>
@@ -58,7 +54,7 @@ export default function Footer() {
         </div>
       </div>
 
-      {/* BOTTOM ROW 
+      {/* BOTTOM ROW */}
       <div className="footer-bottom-row">
         <p>© 2024 H&P Projects. All rights reserved.</p>
 
@@ -68,23 +64,6 @@ export default function Footer() {
           <a href="#">Cookies settings</a>
         </div>
       </div>
-
     </footer>
   );
-}*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*anindya latest review code*/
+}

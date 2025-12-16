@@ -31,16 +31,60 @@
 }
 
 /* ==========================================================
-   BACKGROUND PANEL
+   DECORATIVE ELEMENTS
 ========================================================== */
-.panel-bg {
+.partner-decorative-circles {
+  position: relative;
   width: 100%;
-  max-width: 1100px;
+  max-width: 1400px;
   margin: 0 auto;
-  background: linear-gradient(180deg, #f6f9fa 0%, #e1e8ea 100%);
-  padding: 50px 0 200px;
-  border-radius: 28px;
-  box-shadow: 0 30px 60px rgba(0,0,0,0.18);
+  height: 0;
+  margin-bottom: -40px;
+}
+
+.partner-circle-left,
+.partner-circle-right {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  background: #075056;
+  border-radius: 50%;
+  top: -40px;
+}
+
+.partner-circle-left {
+  left: 5%;
+}
+
+.partner-circle-right {
+  right: 5%;
+}
+
+.partner-decorative-lines {
+  position: relative;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  height: 0;
+  margin-top: 20px;
+  margin-bottom: 70px;
+}
+
+.partner-line-left,
+.partner-line-right {
+  position: absolute;
+  width: 4px;
+  height: 400px;
+  background: #075056;
+  top: 0;
+}
+
+.partner-line-left {
+  left: 5%;
+}
+
+.partner-line-right {
+  right: 5%;
 }
 
 /* ==========================================================
@@ -50,6 +94,10 @@
   display: flex;
   justify-content: center;
   gap: 90px;
+  margin-top: 70px;
+  padding-bottom: 100px;
+  position: relative;
+  z-index: 1;
 }
 
 /* ==========================================================
@@ -57,31 +105,43 @@
 ========================================================== */
 .partner-card {
   width: 330px;
-  background: transparent;
-  overflow: visible;
-  border-radius: 22px;
+  background: #0d5a5b;
+  overflow: hidden;
+  border-radius: 18px;
   position: relative;
   cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  isolation: isolate;
+}
+
+.partner-card:hover {
+  transform: translateY(-5px);
 }
 
 /* IMAGE WRAPPER */
 .image-wrapper {
   height: 350px;
-  background: #0d5a5b;
-  border-radius: 18px 18px 0 0;
+  background: rgba(255, 255, 255, 0.1);
   display: flex;
   justify-content: center;
   align-items: flex-end;
+  flex-shrink: 0;
+  overflow: hidden;
+  border-radius: 18px 18px 0 0;
+  padding-bottom: 20px;
 }
 
 .image-wrapper img {
   width: 260px;
   object-fit: contain;
-  transition: 0.3s ease;
+  transition: transform 0.5s ease-in-out;
+  transform-origin: center bottom;
 }
 
 .partner-card:hover img {
-  transform: translateY(-14px);
+  transform: scale(1.15);
 }
 
 /* NAME BAR */
@@ -91,48 +151,71 @@
   padding: 14px 0;
   font-size: 20px;
   font-weight: 700;
-  border-radius: 0 0 18px 18px;
   position: relative;
   z-index: 2;
+  margin-top: 20px;
+  transition: margin-top 0.4s ease-in-out;
+  flex-shrink: 0;
+  width: 100%;
+  border-radius: 0 0 18px 18px;
+  text-align: center;
 }
 
 /* ==========================================================
    HOVER DESCRIPTION — APPEARS BELOW NAME
 ========================================================== */
 .partner-hover-info {
-  position: absolute;
-  top: 390px;
-  left: 0;
   width: 100%;
   background: #0c5b5f;
-  padding: 22px;
+  padding: 0 20px;
   color: #fff;
   opacity: 0;
-  transform: translateY(40px);
+  visibility: hidden;
+  max-height: 0;
+  overflow: hidden;
+  transform: translateY(-10px);
+  transition: all 0.5s ease-in-out;
+  flex-shrink: 0;
+  box-sizing: border-box;
+  padding-top: 0;
+  padding-bottom: 0;
   border-radius: 0 0 18px 18px;
-  transition: all 0.4s ease;
+  position: relative;
   z-index: 1;
 }
 
 .partner-card:hover .partner-hover-info {
   opacity: 1;
-  transform: translateY(-10px);
+  visibility: visible;
+  max-height: 500px;
+  transform: translateY(0);
+  pointer-events: auto;
+  padding: 20px;
+}
+
+.partner-card:hover .partner-card-name {
+  margin-top: 0;
+  border-radius: 0;
 }
 
 /* TEXT INSIDE HOVER */
 .partner-hover-info h2 {
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 800;
   margin-bottom: 8px;
+  margin-top: 0;
 }
 
 .partner-hover-info h4 {
-  font-size: 14px;
+  font-size: 13px;
   margin-bottom: 10px;
   font-weight: 600;
+  margin-top: 0;
 }
 
 .partner-hover-info p {
-  font-size: 12.5px;
-  line-height: 130%;
+  font-size: 12px;
+  line-height: 1.5;
+  margin: 0;
+  word-wrap: break-word;
 }

@@ -1,4 +1,4 @@
-import "./Hero.css";
+import "./styles/Hero.css";
 import leftImage from "../assets/hero-office.jpg";
 import rightImage from "../assets/hero-title.jpg";
 

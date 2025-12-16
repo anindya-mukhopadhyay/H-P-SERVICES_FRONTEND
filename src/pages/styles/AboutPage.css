@@ -4,6 +4,11 @@ body, #root {
   padding: 0 !important;
 }
 
+/* PAGE WRAPPER - Adds gap before footer */
+.about-page-wrapper {
+  margin-bottom: 80px;
+}
+
 /* WRAPPER */
 .about-wrapper {
   width: 100%;
@@ -25,8 +30,10 @@ body, #root {
   width: 100%;
   height: 420px;
   object-fit: cover;
+  object-position: bottom;
   display: block;
 }
+
 
 /* ---------------------------------------------
    HEADING + DECOR ROW
@@ -200,161 +207,3 @@ body, #root {
   transform: translateY(0px);
 }
 
-/* ============================================
-   FOOTER
-============================================ */
-
-.footer-section {
-  width: 100%;
-  background: #075056;
-  padding-top: 45px;
-  padding-bottom: 35px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  box-sizing: border-box;
-}
-
-.footer-content {
-  width: 1137.78px;
-  min-height: 216.89px;
-
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  box-sizing: border-box;
-  color: #ffffff;
-  border-radius: 0 !important;
-}
-
-.footer-left {
-  width: 48%;
-  display: flex;
-  flex-direction: column;
-}
-
-.footer-logo-row {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-}
-
-.footer-logo {
-  width: 56px;
-  height: 56px;
-  object-fit: contain;
-  background: transparent;
-}
-
-.footer-title {
-  margin: 0;
-  font-size: 30px;
-  font-weight: 700;
-  font-family: Montserrat, sans-serif;
-}
-
-.footer-desc {
-  margin-top: 10px;
-  font-size: 15px;
-  line-height: 150%;
-  max-width: 450px;
-  opacity: 0.95;
-  font-family: Montserrat, sans-serif;
-}
-
-.footer-social {
-  margin-top: 18px;
-  display: flex;
-  gap: 20px;
-}
-
-.footer-social img {
-  width: 24px;
-  height: 24px;
-  cursor: pointer;
-  transition: transform 0.2s ease;
-}
-
-.footer-social img:hover {
-  transform: scale(1.15);
-}
-
-.footer-divider {
-  width: 1px;
-  height: 218px;
-  background: rgba(255, 255, 255, 0.25);
-}
-
-.footer-right {
-  width: 48%;
-  display: flex;
-  flex-direction: column;
-  gap: 22px;
-}
-
-.contact-item {
-  display: flex;
-  align-items: flex-start;
-  gap: 12px;
-}
-
-.contact-icon {
-  width: 22px;
-  height: 22px;
-  margin-top: 4px;
-  object-fit: contain;
-}
-
-.contact-item h4 {
-  margin: 0;
-  font-size: 17px;
-  font-weight: 700;
-  font-family: Montserrat, sans-serif;
-  color: #ffffff;
-}
-
-.contact-item a,
-.contact-item p {
-  margin-top: 4px;
-  font-size: 14px;
-  line-height: 140%;
-  color: #d8f3f3;
-  text-decoration: none;
-  font-family: Montserrat, sans-serif;
-}
-
-.contact-item a:hover {
-  text-decoration: underline;
-}
-
-.footer-bottom-row {
-  width: 1137.78px;
-  margin-top: 32px;
-
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  font-size: 13px;
-  font-family: Montserrat, sans-serif;
-  color: #d9f2f2;
-
-  border-top: 1px solid rgba(255, 255, 255, 0.22);
-  padding-top: 14px;
-}
-
-.footer-links {
-  display: flex;
-  gap: 26px;
-}
-
-.footer-links a {
-  font-size: 13px;
-  text-decoration: none;
-  color: #d9f2f2;
-  font-family: Montserrat, sans-serif;
-}
-
-.footer-links a:hover {
-  text-decoration: underline;
-}
