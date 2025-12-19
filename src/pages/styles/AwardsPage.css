@@ -1,6 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&display=swap");
 
 /* ------------------------------------------------------ */
+/* PAGE WRAPPER - Adds gap before footer                 */
+/* ------------------------------------------------------ */
+
+.awards-page-wrapper {
+  margin-bottom: 80px;
+}
+
+/* ------------------------------------------------------ */
 /* WRAPPER                                                */
 /* ------------------------------------------------------ */
 
@@ -136,7 +144,7 @@
   border-radius: 12px;
   position: relative;
   overflow: hidden;
-  transition: 0.3s;
+  transition: 0.5s ease;
 }
 
 .award-content {
@@ -160,7 +168,7 @@
   font-size: 13px;
   opacity: 0;
   height: 0;
-  transition: 0.3s;
+  transition: 0.5s ease;
   white-space: normal;
   word-break: break-word;
 }
@@ -179,7 +187,7 @@
   position: absolute;
   left: 15px;
   bottom: 10px;
-  transition: 0.3s;
+  transition: 0.5s ease;
 }
 
 /* 🔥 FIX: move the IMG lower on hover so the last line is fully visible */
@@ -304,93 +312,48 @@
   text-align: center;
 }
 
-/* CERT IMAGE */
+/* CERTIFICATES GRID */
 
-.cert-image-wrapper {
-  margin-top: 20px;
-  display: flex;
-  justify-content: center;
+.certificates-grid-wrapper {
+  margin-top: 40px;
+  padding: 0 40px;
 }
 
-.cert-big-img {
-  width: 75%;
-  border-radius: 18px;
-}
-
-/* FOOTER */
-
-.footer-section {
+.certificates-grid {
   width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.certificate-card {
   background: #075056;
-  padding: 45px 0;
+  border-radius: 12px;
+  padding: 24px 28px;
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.certificate-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(7, 80, 86, 0.3);
+}
+
+.certificate-title {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0 0 12px 0;
   color: #fff;
 }
 
-/* FULL-WIDTH FIX */
-.footer-content {
-  width: 90%;            /* was 1137px */
-  max-width: 1400px;     /* keeps it neat on large screens */
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
+.certificate-desc {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.6;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.95);
 }
 
-.footer-left {
-  width: 48%;
-}
-
-.footer-logo {
-  width: 56px;
-  height: 56px;
-}
-
-.footer-title {
-  font-size: 30px;
-  font-weight: 700;
-}
-
-.footer-desc {
-  margin-top: 12px;
-  opacity: 0.9;
-}
-
-.footer-social {
-  display: flex;
-  gap: 20px;
-  margin-top: 18px;
-}
-
-.footer-divider {
-  width: 1px;
-  height: 218px;
-  background: rgba(255, 255, 255, 0.25);
-}
-
-.footer-right {
-  width: 48%;
-  display: flex;
-  flex-direction: column;
-  gap: 22px;
-}
-
-.contact-item {
-  display: flex;
-  gap: 12px;
-}
-
-.contact-icon {
-  width: 22px;
-}
-
-/* FULL-WIDTH FIX */
-.footer-bottom-row {
-  width: 90%;            /* was 1137px */
-  max-width: 1400px;
-  margin: 32px auto 0;
-  padding-top: 14px;
-  border-top: 1px solid rgba(255, 255, 255, 0.22);
-  display: flex;
-  justify-content: space-between;
-  color: #d9f2f2;
-}

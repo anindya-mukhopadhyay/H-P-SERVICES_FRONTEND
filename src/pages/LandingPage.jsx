@@ -1,22 +1,11 @@
-import "./landing.css";
+import "./styles/landing.css";
 import Partner from "../components/Partner";
 import Hero from "../components/Hero";
 import BusinessGrid from "../components/BusinessGrid";
 import Header from "../components/Header";
+import Footer from "../components/Footer";
 
 import techInnovationImage from "../assets/tech-innovation.png";
-import logoImage from "../assets/logo.jpg";
-
-// Footer assets
-import f1 from "../assets/footer1.png";
-import f2 from "../assets/footer2.png";
-import f3 from "../assets/footer3.png";
-import f4 from "../assets/footer4.png";
-import f5 from "../assets/footer5.png";
-
-import mailIcon from "../assets/mail.png";
-import callIcon from "../assets/call.png";
-import locationIcon from "../assets/location.png";
 
 const CITIES = [
   "Kolkata, West Bengal",
@@ -35,10 +24,12 @@ export default function LandingPage() {
       <Header />
 
       {/* HERO */}
-      <Hero />
+      <section id="home">
+        <Hero />
+      </section>
 
       {/* CITIES MARQUEE */}
-      <section className="cities-strip">
+      <section id="presence" className="cities-strip">
         <h3>Serving major cities across India</h3>
 
         <div className="cities-marquee">
@@ -53,7 +44,7 @@ export default function LandingPage() {
       </section>
 
       {/* BUSINESS SECTION */}
-      <section className="business-section">
+      <section id="business" className="business-section">
         <div className="business-line long" />
         <div className="business-line short" />
 
@@ -81,7 +72,7 @@ export default function LandingPage() {
       </section>
 
       {/* TECHNOLOGY & INNOVATION SECTION */}
-      <section className="tech-innovation-section">
+      <section id="technology-innovation" className="tech-innovation-section">
         <div className="tech-line long" />
         <div className="tech-line short" />
 
@@ -140,7 +131,7 @@ export default function LandingPage() {
       <Partner />
 
       {/* SUPPLY CAPABILITY SECTION */}
-      <section className="supply-capability-section">
+      <section id="full-service-supply" className="supply-capability-section">
         <div className="supply-capability-content">
 
           <div className="supply-title-container">
@@ -163,77 +154,10 @@ export default function LandingPage() {
             <div className="supply-bottom-line long"></div>
           </div>
         </div>
-
-        {/* -------------- FOOTER (same as AwardsPage) -------------- */}
-        <div className="footer-section">
-          <div className="footer-content">
-
-            {/* LEFT COLUMN */}
-            <div className="footer-left">
-              <div className="footer-logo-row">
-                <img src={logoImage} alt="logo" className="footer-logo" />
-                <h2 className="footer-title">H&P Projects</h2>
-              </div>
-
-              <p className="footer-desc">
-                Ready to transform your vision into reality? Our team is prepared
-                to guide you through every step.
-              </p>
-
-              <div className="footer-social">
-                <img src={f1} alt="fb" />
-                <img src={f2} alt="ig" />
-                <img src={f3} alt="x" />
-                <img src={f4} alt="linkedin" />
-                <img src={f5} alt="youtube" />
-              </div>
-            </div>
-
-            <div className="footer-divider"></div>
-
-            {/* RIGHT COLUMN */}
-            <div className="footer-right">
-
-              <div className="contact-item">
-                <img src={mailIcon} alt="mail" className="contact-icon" />
-                <div>
-                  <h4>Email</h4>
-                  <a href="mailto:info@hpprojects.com.au">
-                    info@hpprojects.com.au
-                  </a>
-                </div>
-              </div>
-
-              <div className="contact-item">
-                <img src={callIcon} alt="call" className="contact-icon" />
-                <div>
-                  <h4>Phone</h4>
-                  <a href="tel:+61290000000">+61 2 9000 0000</a>
-                </div>
-              </div>
-
-              <div className="contact-item">
-                <img src={locationIcon} alt="location" className="contact-icon" />
-                <div>
-                  <h4>Office</h4>
-                  <p>Level 5, 100 Miller Street, North Sydney NSW 2060</p>
-                </div>
-              </div>
-
-            </div>
-          </div>
-
-          <div className="footer-bottom-row">
-            <p>© 2024 H&P Projects. All rights reserved.</p>
-
-            <div className="footer-links">
-              <a href="#">Privacy policy</a>
-              <a href="#">Terms of service</a>
-              <a href="#">Cookies settings</a>
-            </div>
-          </div>
-        </div>
       </section>
+
+      {/* -------------- FOOTER COMPONENT -------------- */}
+      <Footer />
     </div>
   );
 }

@@ -1,0 +1,138 @@
+.footer-section {
+  width: 100%;
+  background: #075056;
+  padding: 45px 0;
+  color: #fff;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* MAIN CONTENT AREA */
+.footer-content {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+/* LEFT AREA */
+.footer-left {
+  width: 48%;
+}
+
+.footer-logo-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.footer-logo {
+  width: 56px;
+  height: 56px;
+  object-fit: contain;
+}
+
+.footer-title {
+  margin: 0;
+  font-size: 30px;
+  font-weight: 700;
+  font-family: "Montserrat", sans-serif;
+}
+
+.footer-desc {
+  margin-top: 12px;
+  font-size: 15px;
+  line-height: 150%;
+  max-width: 450px;
+  opacity: 0.95;
+  font-family: "Montserrat", sans-serif;
+}
+
+/* SOCIAL ICONS */
+.footer-social {
+  margin-top: 18px;
+  display: flex;
+  gap: 20px;
+}
+
+.footer-social img {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.footer-social img:hover {
+  transform: scale(1.15);
+}
+
+/* DIVIDER */
+.footer-divider {
+  width: 1px;
+  height: 218px;
+  background: rgba(255, 255, 255, 0.25);
+}
+
+/* RIGHT SIDE */
+.footer-right {
+  width: 48%;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.footer-right h4 {
+  margin: 0;
+  font-size: 17px;
+  font-weight: 700;
+  font-family: "Montserrat", sans-serif;
+  color: #ffffff;
+}
+
+.footer-right a,
+.footer-right p {
+  margin-top: 4px;
+  font-size: 14px;
+  line-height: 140%;
+  color: #d8f3f3;
+  text-decoration: none;
+  font-family: "Montserrat", sans-serif;
+}
+
+.footer-right a:hover {
+  text-decoration: underline;
+}
+
+/* BOTTOM ROW */
+.footer-bottom-row {
+  width: 100%;
+  max-width: 1400px;
+  margin: 32px auto 0;
+  padding: 14px 5% 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.22);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #d9f2f2;
+  font-size: 13px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.footer-links {
+  display: flex;
+  gap: 26px;
+}
+
+.footer-links a {
+  font-size: 13px;
+  text-decoration: none;
+  color: #d9f2f2;
+  font-family: "Montserrat", sans-serif;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}

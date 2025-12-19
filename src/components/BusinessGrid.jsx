@@ -1,5 +1,5 @@
 import React from "react";
-import "./BusinessGrid.css";
+import "./styles/BusinessGrid.css";
 
 export default function BusinessGrid() {
   const businesses = [
