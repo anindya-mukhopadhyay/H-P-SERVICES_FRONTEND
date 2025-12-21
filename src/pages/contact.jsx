@@ -14,8 +14,8 @@ export default function Contact() {
 
         <h3>DUST SOLUTION SYSTEM</h3>
         <p className="info">
-          Mobile No. 8984030821 , 9332627903  <br />
-          Email: kp4283462009@gmail.com  <br />
+          Email:  <br />
+          kp4283462009@gmail.com  <br />
           abhradeephazra99@gmail.com
         </p>
 
@@ -23,7 +23,7 @@ export default function Contact() {
           B/28, Gholui,Balichak,Kharagpur, Paschim Medinipur, West Bengal-721124
         </p>
 
-        <p className="info">Ph: 022 31410706</p>
+        <p className="info">Ph: 8984030821 , 9332627903</p>
 
         <button className="contact-btn">SEND YOUR QUERY</button>
       </div>

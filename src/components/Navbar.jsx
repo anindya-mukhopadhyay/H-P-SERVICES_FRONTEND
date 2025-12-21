@@ -98,7 +98,7 @@ export default function Navbar() {
 
           {/* ✅ OUR PRESENCE */}
           <a
-            href="https://docs.google.com/forms/d/e/YOUR_FORM_ID/viewform"
+            href="https://forms.gle/uCcqNftGXYULELzY6"
             target="_blank"
             rel="noopener noreferrer"
           >
