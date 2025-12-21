@@ -3,6 +3,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
 
+// Images
 import koushik11 from "../assets/koushik11.png";
 import koushik12 from "../assets/koushik12.png";
 
@@ -33,6 +34,7 @@ export default function Partner() {
 
       {/* Card Container */}
       <div className="partner-card-container">
+        
         {/* CARD 1 */}
         <div className="partner-card" data-aos="fade-up">
           <div className="image-wrapper">
@@ -42,7 +44,7 @@ export default function Partner() {
           {/* NAME */}
           <div className="partner-card-name">KOUSHIK PAUL</div>
 
-          {/* DESCRIPTION APPEARS BELOW NAME */}
+          {/* DESCRIPTION */}
           <div className="partner-hover-info">
             <h4>Partner – Operations & Decision-Making Head of Projects</h4>
             <p>
@@ -58,7 +60,7 @@ export default function Partner() {
         {/* CARD 2 */}
         <div className="partner-card" data-aos="fade-up" data-aos-delay="150">
           <div className="image-wrapper">
-            <img src={koushik12} alt="Koushik Paul" />
+            <img src={koushik12} alt="Abhradeep Hazra" />
           </div>
 
           {/* NAME */}
@@ -76,6 +78,7 @@ export default function Partner() {
             </p>
           </div>
         </div>
+        
       </div>
     </section>
   );

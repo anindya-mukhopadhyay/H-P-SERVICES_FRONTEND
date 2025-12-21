@@ -7,12 +7,12 @@
 }
 
 /* ==========================================================
-   TITLE — (P moved upward EXACTLY like Figma)
+   TITLE
 ========================================================== */
 .partner-title {
   display: flex;
   justify-content: center;
-  align-items: flex-start;   /* allows independent vertical control */
+  align-items: flex-start;
   gap: 8px;
   margin-bottom: 70px;
 }
@@ -21,13 +21,13 @@
   font-size: 110px;
   font-weight: 800;
   color: #075056;
-  margin-top: -32px;         /* ⬆️ Lifts P upward */
+  margin-top: -32px;
 }
 
 .partner-title-rest {
   font-size: 50px;
   font-weight: 800;
-  margin-top: 15px;          /* aligns ARTNERS PROFILE with the P */
+  margin-top: 15px;
 }
 
 /* ==========================================================
@@ -52,13 +52,8 @@
   top: -40px;
 }
 
-.partner-circle-left {
-  left: 5%;
-}
-
-.partner-circle-right {
-  right: 5%;
-}
+.partner-circle-left { left: 5%; }
+.partner-circle-right { right: 5%; }
 
 .partner-decorative-lines {
   position: relative;
@@ -79,16 +74,11 @@
   top: 0;
 }
 
-.partner-line-left {
-  left: 5%;
-}
-
-.partner-line-right {
-  right: 5%;
-}
+.partner-line-left { left: 5%; }
+.partner-line-right { right: 5%; }
 
 /* ==========================================================
-   CARD CONTAINER
+   CARD CONTAINER (The Fix is Here)
 ========================================================== */
 .partner-card-container {
   display: flex;
@@ -98,7 +88,15 @@
   padding-bottom: 100px;
   position: relative;
   z-index: 1;
+  
+  /* CRITICAL FIX: prevents the non-hovered card from stretching 
+     to match the height of the hovered card */
+  align-items: flex-start; 
 }
+
+/* src/components/styles/Partner.css */
+
+/* ... (keep existing code above) ... */
 
 /* ==========================================================
    PARTNER CARD
@@ -106,18 +104,24 @@
 .partner-card {
   width: 330px;
   background: #0d5a5b;
-  overflow: hidden;
+  overflow: hidden; /* This is crucial for clipping */
   border-radius: 18px;
   position: relative;
   cursor: pointer;
-  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
   display: flex;
   flex-direction: column;
   isolation: isolate;
+  
+  /* Fixes for overflow/clipping glitches during animation */
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  transform: translateZ(0);
 }
 
 .partner-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.2);
 }
 
 /* IMAGE WRAPPER */
@@ -126,11 +130,19 @@
   background: rgba(255, 255, 255, 0.1);
   display: flex;
   justify-content: center;
-  align-items: flex-end;
+  
+  /* CHANGED: Center vertically and add top padding to push image down */
+  align-items: center;
+  padding-top: 40px; 
+  padding-bottom: 0;
+  
   flex-shrink: 0;
   overflow: hidden;
   border-radius: 18px 18px 0 0;
-  padding-bottom: 20px;
+  
+  /* Ensure it sits behind the text */
+  position: relative;
+  z-index: 0;
 }
 
 .image-wrapper img {
@@ -152,9 +164,9 @@
   font-size: 20px;
   font-weight: 700;
   position: relative;
-  z-index: 2;
+  z-index: 2; /* Sits on top */
   margin-top: 20px;
-  transition: margin-top 0.4s ease-in-out;
+  transition: margin-top 0.4s ease-in-out, background 0.3s;
   flex-shrink: 0;
   width: 100%;
   border-radius: 0 0 18px 18px;
@@ -162,7 +174,7 @@
 }
 
 /* ==========================================================
-   HOVER DESCRIPTION — APPEARS BELOW NAME
+   HOVER DESCRIPTION
 ========================================================== */
 .partner-hover-info {
   width: 100%;
@@ -174,7 +186,46 @@
   max-height: 0;
   overflow: hidden;
   transform: translateY(-10px);
-  transition: all 0.5s ease-in-out;
+  
+  transition: 
+    opacity 0.4s ease-in-out,
+    max-height 0.5s ease-in-out,
+    transform 0.4s ease-in-out,
+    padding 0.4s ease;
+    
+  flex-shrink: 0;
+  box-sizing: border-box;
+  padding-top: 0;
+  padding-bottom: 0;
+  border-radius: 0 0 18px 18px; /* Forms the new bottom corners */
+  position: relative;
+  z-index: 1; /* Sits between name and image */
+}
+
+/* ==========================================================
+   HOVER DESCRIPTION
+========================================================== */
+.partner-hover-info {
+  width: 100%;
+  background: #0c5b5f;
+  padding: 0 20px;
+  color: #fff;
+  
+  /* Start hidden */
+  opacity: 0;
+  visibility: hidden;
+  max-height: 0;
+  
+  overflow: hidden;
+  transform: translateY(-10px);
+  
+  /* Smooth transition for opening */
+  transition: 
+    opacity 0.4s ease-in-out,
+    max-height 0.5s ease-in-out,
+    transform 0.4s ease-in-out,
+    padding 0.4s ease;
+    
   flex-shrink: 0;
   box-sizing: border-box;
   padding-top: 0;
@@ -184,18 +235,20 @@
   z-index: 1;
 }
 
+/* ACTIVE STATE (When hovering THIS SPECIFIC card) */
 .partner-card:hover .partner-hover-info {
   opacity: 1;
   visibility: visible;
-  max-height: 500px;
+  max-height: 500px; /* Arbitrary large height to allow content to fit */
   transform: translateY(0);
   pointer-events: auto;
-  padding: 20px;
+  padding: 20px; /* Restore padding on open */
 }
 
 .partner-card:hover .partner-card-name {
   margin-top: 0;
   border-radius: 0;
+  background: #0c5b5f; /* Blend with bottom section */
 }
 
 /* TEXT INSIDE HOVER */
@@ -211,11 +264,12 @@
   margin-bottom: 10px;
   font-weight: 600;
   margin-top: 0;
+  color: #a4dfe3; /* Slightly lighter accent for subhead */
 }
 
 .partner-hover-info p {
-  font-size: 12px;
-  line-height: 1.5;
+  font-size: 13px;
+  line-height: 1.6;
   margin: 0;
   word-wrap: break-word;
 }
