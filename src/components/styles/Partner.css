@@ -133,12 +133,12 @@
   width: 260px;
   object-fit: contain;
   transition: transform 0.5s ease;
-  transform-origin: center center; /* FIXED */
+  transform-origin: center center;
 }
 
-/* Controlled zoom — no overlap */
+/* Zoom (safe) */
 .partner-card:hover img {
-  transform: scale(1.28);
+  transform: scale(1.12) translateY(-6px);
 }
 
 /* ==========================================================
@@ -154,13 +154,13 @@
   text-align: center;
 
   position: relative;
-  z-index: 5; /* CRITICAL FIX */
+  z-index: 5;
 
   transition: margin-top 0.4s ease, background 0.3s ease;
 }
 
 /* ==========================================================
-   HOVER / EXPAND INFO (SINGLE SOURCE OF TRUTH)
+   HOVER / EXPAND INFO (SINGLE SOURCE)
 ========================================================== */
 .partner-hover-info {
   background: #0c5b5f;
@@ -213,7 +213,7 @@
 }
 
 /* ==========================================================
-   DESKTOP HOVER SUPPORT (SAFE)
+   DESKTOP HOVER SUPPORT
 ========================================================== */
 @media (hover: hover) and (pointer: fine) {
   .partner-card:not(.active):hover .partner-hover-info {
@@ -227,5 +227,66 @@
   .partner-card:not(.active):hover .partner-card-name {
     margin-top: 0;
     background: #0c5b5f;
+  }
+}
+
+/* ==========================================================
+   RESPONSIVE — TABLETS & MOBILES
+========================================================== */
+@media (max-width: 768px) {
+  .partner-section {
+    padding: 70px 4%;
+  }
+
+  .partner-title-big-p {
+    font-size: 70px;
+    margin-top: -20px;
+  }
+
+  .partner-title-rest {
+    font-size: 32px;
+    margin-top: 12px;
+  }
+
+  .partner-card-container {
+    flex-direction: column;
+    gap: 40px;
+    padding-bottom: 60px;
+  }
+
+  .partner-card {
+    width: 100%;
+    max-width: 360px;
+    margin: 0 auto;
+  }
+
+  .image-wrapper {
+    height: 300px;
+    padding-top: 30px;
+  }
+
+  .image-wrapper img {
+    width: 220px;
+  }
+}
+
+/* ==========================================================
+   RESPONSIVE — SMALL PHONES
+========================================================== */
+@media (max-width: 480px) {
+  .partner-title-big-p {
+    font-size: 56px;
+  }
+
+  .partner-title-rest {
+    font-size: 26px;
+  }
+
+  .partner-card-name {
+    font-size: 18px;
+  }
+
+  .partner-hover-info p {
+    font-size: 12.5px;
   }
 }
