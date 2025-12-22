@@ -4,7 +4,7 @@ import LandingPage from './pages/LandingPage';
 import AboutPage from './pages/AboutPage';
 import AwardsPage from "./pages/AwardsPage";
 import ScrollToTop from './components/ScrollToTop';
-import ContactPage from './pages/Contact';
+import ContactPage from './pages/contact';
 import Navbar from "./components/Navbar";
 
 function App() {
