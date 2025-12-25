@@ -81,7 +81,7 @@ export default function Footer() {
           <div>
             <h4 className="m-0 text-[17px] font-bold">Email</h4>
             <a href="mailto:info@hpprojects.com.au" className="mt-1 text-sm leading-[140%] text-[#d8f3f3] no-underline hover:underline">
-              info@hpprojects.com.au
+              hpprojects.adm@gmail.com
             </a>
           </div>
 

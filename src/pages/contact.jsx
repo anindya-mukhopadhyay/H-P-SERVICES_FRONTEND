@@ -28,13 +28,12 @@ export default function Contact() {
         </p>
 
         <h3 className="my-[25px] mt-[25px] mb-[15px] text-xl tracking-wide text-[#075056] max-md:text-lg max-md:my-5 max-sm:text-base max-sm:my-4 max-sm:mb-3">
-          DUST SOLUTION SYSTEM
+          H&P PROJECTS
         </h3>
 
         <p className="text-sm text-[#075056] leading-[1.8] mb-[15px] max-md:text-xs max-md:mb-3 max-sm:leading-[1.6]">
           Email: <br />
-          kp4283462009@gmail.com <br />
-          abhradeephazra99@gmail.com
+          hpprojects.adm@gmail.com
         </p>
 
         <p className="text-sm text-[#075056] leading-[1.8] mb-[15px] max-md:text-xs max-md:mb-3 max-sm:leading-[1.6]">
