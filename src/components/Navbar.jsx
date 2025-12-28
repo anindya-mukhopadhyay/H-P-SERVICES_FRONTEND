@@ -83,7 +83,7 @@ export default function Navbar() {
             className="text-xl font-bold text-white tracking-wide cursor-pointer max-md:text-lg max-sm:text-[17px] max-[360px]:text-base max-lg:text-[19px]"
             onClick={handleLogoClick}
           >
-            H&P PROJECTS
+            H & P PROJECTS
           </span>
         </div>
 
