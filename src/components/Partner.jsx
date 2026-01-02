@@ -1,21 +1,15 @@
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 
 // Images
 import koushik11 from "../assets/koushik11.png";
 import koushik12 from "../assets/koushik12.png";
 
 export default function Partner() {
-  const [activeIndex, setActiveIndex] = useState(null);
-
   useEffect(() => {
     AOS.init({ duration: 900, once: true });
   }, []);
-
-  const toggleCard = (index) => {
-    setActiveIndex(activeIndex === index ? null : index);
-  };
 
   return (
     <section className="w-full bg-[#E4EEF0] py-[110px] px-[5%] text-center max-md:py-20 max-sm:py-12">

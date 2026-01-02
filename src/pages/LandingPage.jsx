@@ -18,7 +18,7 @@ const CITIES = [
 export default function LandingPage() {
   return (
     <div className="w-full overflow-x-hidden bg-[#eef6f7] font-['Inter',sans-serif]">
-      
+
       {/* HEADER */}
       <Header />
 
@@ -53,10 +53,11 @@ export default function LandingPage() {
         </div>
 
         <div className="flex justify-center items-end mt-[70px] gap-2.5 max-md:mt-[30px] max-md:items-baseline max-sm:mt-5">
-          <span className="text-[96px] font-black text-[#075056] leading-none max-md:text-[52px] max-md:relative max-md:-top-1 max-sm:text-[46px] max-sm:-top-0.5">O</span>
-          <h2 className="text-[52px] font-black leading-[1.1] max-md:text-[28px] max-sm:text-[26px]">UR BUSINESSES</h2>
+          <h2 className="text-5xl font-black leading-[1.1] relative max-lg:text-4xl max-md:text-3xl max-sm:text-2xl">
+            <span className="text-[80px] text-[#075056] max-lg:text-[60px] max-md:text-5xl max-sm:text-[40px]">O</span>
+            UR BUSINESSES <br className="max-sm:hidden" />
+          </h2>
         </div>
-
         <div className="w-40 h-1 bg-[#075056] my-5 mx-auto mb-[30px] max-md:w-32 max-sm:w-24 max-sm:mb-5" />
 
         <p className="max-w-[900px] mx-auto mb-[60px] text-[17px] leading-[1.8] text-center px-5 max-md:text-base max-md:mb-10 max-sm:text-sm max-sm:mb-8">
@@ -82,7 +83,7 @@ export default function LandingPage() {
               <span className="text-[80px] text-[#075056] max-lg:text-[60px] max-md:text-5xl max-sm:text-[40px]">T</span>
               ECHNOLOGY AND <br className="max-sm:hidden" /> INNOVATION
             </h2>
-            <div className="w-[170px] h-1 bg-[#075056] absolute -bottom-[18px] left-0 max-md:left-1/2 max-md:-translate-x-1/2 max-md:w-32 max-sm:w-24" style={{content: ''}}></div>
+            <div className="w-[170px] h-1 bg-[#075056] absolute -bottom-[18px] left-0 max-md:left-1/2 max-md:-translate-x-1/2 max-md:w-32 max-sm:w-24" style={{ content: '' }}></div>
 
             <p className="mt-[35px] text-[17px] leading-[1.8] max-w-[540px] max-md:mx-auto max-md:text-base max-md:mt-8 max-sm:text-sm max-sm:mt-6">
               At H &amp; P Projects, technology is not just about machines and
@@ -131,10 +132,10 @@ export default function LandingPage() {
       <section id="full-service-supply" className="py-[120px] px-5 mt-[60px] max-md:py-[60px] max-md:mt-[30px] max-sm:py-10 max-sm:mt-5">
         <div className="max-w-[1100px] mx-auto">
 
-          <div className="flex items-end gap-2.5 max-md:items-baseline max-md:gap-2">
-            <h2 className="text-[64px] font-black text-[#075056] leading-none max-md:text-[44px] max-md:relative max-md:-top-[3px] max-sm:text-[40px] max-sm:-top-0.5">F</h2>
-            <h2 className="text-[38px] font-black leading-[1.15] max-md:text-[26px] max-sm:text-xl">ULL SERVICE SUPPLY CAPABILITY</h2>
-          </div>
+          <h2 className="text-5xl font-black leading-[1.1] relative max-lg:text-4xl max-md:text-3xl max-sm:text-2xl">
+            <span className="text-[80px] text-[#075056] max-lg:text-[60px] max-md:text-5xl max-sm:text-[40px]">F</span>
+            ULL SERVICE SUPPLY CAPABILITY <br className="max-sm:hidden" />
+          </h2>
 
           <div className="flex flex-col items-end mt-5 mb-[30px] max-md:mb-5 max-sm:mb-4">
             <div className="w-[180px] h-2.5 bg-[#075056] rounded-xl mb-2 max-md:w-32 max-md:h-2 max-sm:w-24"></div>
@@ -142,7 +143,7 @@ export default function LandingPage() {
           </div>
 
           <p className="text-[17px] leading-[1.6] max-md:text-base max-sm:text-sm">
-          At H &amp; P Projects, we are more than just a service provider—we are a complete solutions partner. Our approach ensures that every stage of the project lifecycle, from planning to execution, is delivered with precision, efficiency, and consistency. We bring together expertise across civil, mechanical, electrical, IT, and manpower solutions, creating a strong foundation for multi-sector support. This integrated approach enables us to provide turnkey solutions tailored to client needs. Our robust supply chain, in-house quality control, and agile processes ensure timely delivery, compliance with standards, and the flexibility to adapt to evolving requirements. This helps us handle even the most complex and large-scale projects with ease. By combining technical know-how with client-focused assurance, we consistently deliver outcomes that inspire trust. With H &amp; P Projects, clients can rely on a partner committed to full-service excellence and long-term progress.
+            At H &amp; P Projects, we are more than just a service provider—we are a complete solutions partner. Our approach ensures that every stage of the project lifecycle, from planning to execution, is delivered with precision, efficiency, and consistency. We bring together expertise across civil, mechanical, electrical, IT, and manpower solutions, creating a strong foundation for multi-sector support. This integrated approach enables us to provide turnkey solutions tailored to client needs. Our robust supply chain, in-house quality control, and agile processes ensure timely delivery, compliance with standards, and the flexibility to adapt to evolving requirements. This helps us handle even the most complex and large-scale projects with ease. By combining technical know-how with client-focused assurance, we consistently deliver outcomes that inspire trust. With H &amp; P Projects, clients can rely on a partner committed to full-service excellence and long-term progress.
 
           </p>
 
