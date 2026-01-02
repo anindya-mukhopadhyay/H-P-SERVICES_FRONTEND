@@ -80,8 +80,8 @@ export default function Footer() {
         <div className="w-[48%] flex flex-col gap-[22px] max-[900px]:w-full max-[900px]:items-center">
           <div>
             <h4 className="m-0 text-[17px] font-bold">Email</h4>
-            <a href="mailto:info@hnpprojects.com" className="mt-1 text-sm leading-[140%] text-[#d8f3f3] no-underline hover:underline">
-              info@hnpprojects.com
+            <a href="mailto:info@hpprojects.com.au" className="mt-1 text-sm leading-[140%] text-[#d8f3f3] no-underline hover:underline">
+              hpprojects.adm@gmail.com
             </a>
           </div>
 
