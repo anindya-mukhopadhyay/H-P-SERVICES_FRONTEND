@@ -1,5 +1,4 @@
 import React from "react";
-import "./BusinessGrid.css";
 
 export default function BusinessGrid() {
   const businesses = [
@@ -54,13 +53,15 @@ export default function BusinessGrid() {
   ];
 
   return (
-    <section className="business-section">
-      {/* NO HEADING */}
-      <div className="business-row">
+    <section className="w-full bg-[#e4eef0] pt-2.5 pb-[60px] max-md:pb-10">
+      <div className="w-[86%] mx-auto flex gap-7 overflow-x-auto py-2.5 max-md:gap-5 max-sm:gap-4 max-sm:w-[92%]">
         {businesses.map((b, index) => (
-          <div className="business-card" key={index}>
-            <h3 className="business-title">{b.title}</h3>
-            <p className="business-desc">{b.desc}</p>
+          <div 
+            className="flex-[0_0_341.33px] w-[341.33px] h-[336.89px] bg-[#075056] rounded-[15.11px] shadow-[0px_3.56px_3.56px_rgba(0,0,0,0.25)] p-[30px] text-white flex flex-col justify-center items-start relative overflow-hidden cursor-pointer group max-lg:flex-[0_0_300px] max-lg:w-[300px] max-lg:h-[300px] max-md:flex-[0_0_280px] max-md:w-[280px] max-md:h-[280px] max-md:p-6 max-sm:flex-[0_0_260px] max-sm:w-[260px] max-sm:h-[260px] max-sm:p-5" 
+            key={index}
+          >
+            <h3 className="text-[22px] font-extrabold leading-[1.25] m-0 relative z-[2] transition-transform duration-300 group-hover:-translate-y-2.5 max-lg:text-xl max-md:text-lg max-sm:text-base">{b.title}</h3>
+            <p className="mt-3 text-[15px] font-normal leading-[1.5] text-[rgba(255,255,255,0.92)] opacity-0 max-h-0 translate-y-2.5 overflow-hidden transition-all duration-[350ms] group-hover:opacity-100 group-hover:max-h-[260px] group-hover:translate-y-0 max-lg:text-sm max-sm:text-[13px]">{b.desc}</p>
           </div>
         ))}
       </div>
